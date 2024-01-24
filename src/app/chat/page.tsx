@@ -15,7 +15,7 @@ const Home = () => {
       <h2 className="font-semibold text-gray-800 text-4xl">
         Welcome to Chat App
       </h2>
-      <p className="text-gray-600 max-w-md text-center">
+      <p className="text-gray-500 max-w-md text-center">
         Connect with friends and start chatting. Add new contacts to expand your
         network.
       </p>
@@ -24,7 +24,7 @@ const Home = () => {
         <h3 className="font-semibold text-gray-800 text-2xl mb-4">
           Quick Tips:
         </h3>
-        <ul className="text-gray-600 flex flex-col gap-y-3">
+        <ul className="text-gray-500 flex flex-col gap-y-3">
           <li className="flex items-center gap-x-2">
             <span className="bg-primary rounded-full p-1 inline-block">
               <PlusIcon className="w-4 h-4 text-white" />

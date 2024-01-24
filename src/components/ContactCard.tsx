@@ -28,13 +28,13 @@ const ContactCard = ({ contact }: ContactCardProps) => {
           <h4 className="font-semibold text-gray-800 text-sm">
             {contact.username}
           </h4>
-          <p className="font-semibold text-gray-400 text-xs max-h-12 overflow-hidden overflow-ellipsis">
+          <p className="font-medium text-gray-400 text-xs max-h-12 overflow-hidden overflow-ellipsis">
             {contact.lastMessage}
           </p>
         </div>
 
         <div className="flex flex-col items-end justify-between gap-3">
-          <h4 className="font-semibold text-gray-400 text-sm">
+          <h4 className="font-medium text-gray-400 text-sm">
             {contact.lastMessageDate}
           </h4>
 
