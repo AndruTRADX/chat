@@ -68,3 +68,21 @@
   background-color: #9ca3af;
   /* Color de la barra al pasar el cursor */
 }
+
+@keyframes blinkColor {
+
+  0%,
+  50%,
+  100% {
+    background-color: #8b5cf6;
+  }
+
+  25%,
+  75% {
+    background-color: #22d3ee;
+  }
+}
+
+.blinking-color {
+  animation: blinkColor 1.9s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}

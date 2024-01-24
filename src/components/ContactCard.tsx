@@ -12,7 +12,7 @@ interface ContactCardProps {
   contact: Contact
 }
 
-const ContactCard: React.FC<ContactCardProps> = ({ contact }) => {
+const ContactCard = ({ contact }: ContactCardProps) => {
   return (
     <div className="flex justify-between items-start rounded-xl hover:bg-primary/5 p-2 gap-3">
       <Image

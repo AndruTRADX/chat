@@ -1,4 +1,5 @@
 import Link from 'next/link'
+
 import { GoogleIcon, navlist } from '../constants'
 import {
   ChatBubbleOvalLeftIcon,
@@ -27,7 +28,7 @@ export default function Home() {
                 href={item.href}
                 target="_blank"
                 key={item.name}
-                className="font-medium text-gray-800 cursor-pointer text-[17px] hover:text-primary"
+                className="font-medium text-gray-700 cursor-pointer text-md hover:text-primary"
               >
                 {item.name}
               </Link>
@@ -46,7 +47,7 @@ export default function Home() {
             className="flex gap-2 items-center bg-white border border-gray-300 shadow-md rounded-xl py-3 px-4 text-gray-500 font-medium hover:bg-gray-50"
             // onClick={() => {/* PENDING */}}
           >
-            <Image src={GoogleIcon} alt="google" className="" width={24} height={24} />
+            <Image src={GoogleIcon} alt="google" width={24} height={24} />
             Continue with Google
           </button>
         </div>
