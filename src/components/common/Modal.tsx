@@ -31,7 +31,7 @@ export default function Modal({ open, setOpen, children }: Props) {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <Dialog.Overlay className="fixed inset-0 backdrop-blur bg-gray-500/25 transition-opacity" />
+            <Dialog.Overlay className="fixed inset-0 backdrop-blur-sm bg-gray-500/25 transition-opacity" />
           </Transition.Child>
           <span
             className="hidden sm:inline-block sm:align-middle sm:h-screen"

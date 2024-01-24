@@ -1,10 +1,6 @@
 import Image from 'next/image'
 
-interface Props {
-  contact: Contact
-}
-
-type Contact = {
+interface Contact {
   username: string
   avatar: string
   lastMessage: string
@@ -12,18 +8,23 @@ type Contact = {
   pendingMessages?: number
 }
 
-const ContactCard = ({ contact }: Props) => {
+interface ContactCardProps {
+  contact: Contact
+}
+
+const ContactCard: React.FC<ContactCardProps> = ({ contact }) => {
   return (
-    <div className="flex justify-between items-center rounded-xl hover:bg-primary/5 p-2">
-      <div className="flex gap-3">
-        <Image
-          src={contact.avatar}
-          className="rounded-xl"
-          width={12}
-          height={12}
-          alt={contact.username}
-        />
-        <div className="flex flex-col justify-center gap-y-1 ">
+    <div className="flex justify-between items-start rounded-xl hover:bg-primary/5 p-2 gap-3">
+      <Image
+        src={contact.avatar}
+        className="rounded-xl"
+        alt={contact.username}
+        width={40}
+        height={40}
+      />
+
+      <div className='flex justify-between items-start w-full'>
+        <div className="flex flex-col justify-start gap-y-1">
           <h4 className="font-semibold text-gray-800 text-sm">
             {contact.username}
           </h4>
@@ -31,16 +32,18 @@ const ContactCard = ({ contact }: Props) => {
             {contact.lastMessage}
           </p>
         </div>
-      </div>
-      <div className="flex flex-col items-center justify-between gap-3">
-        <h4 className="font-semibold text-gray-400 text-sm">
-          {contact.lastMessageDate}
-        </h4>
-        {contact.pendingMessages && (
-          <div className="flex justify-center items-center px-[6px] py-[3px] rounded-full bg-green-500 text-xs text-white font-bold">
-            {contact.pendingMessages}
-          </div>
-        )}
+
+        <div className="flex flex-col items-end justify-between gap-3">
+          <h4 className="font-semibold text-gray-400 text-sm">
+            {contact.lastMessageDate}
+          </h4>
+
+          {contact.pendingMessages && (
+            <div className="flex justify-center items-center px-[6px] py-[2px] rounded-full bg-green-500 text-xs text-white font-bold">
+              {contact.pendingMessages}
+            </div>
+          )}
+        </div>
       </div>
     </div>
   )

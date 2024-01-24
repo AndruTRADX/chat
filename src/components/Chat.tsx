@@ -37,7 +37,10 @@ const Chat = () => {
       <Conversation />
 
       <div className="flex justify-between gap-x-8 items-center w-full border-y border-gray-300 p-6">
-        <CameraIcon className="w-6 h-6 text-gray800" />
+        <button>
+          <CameraIcon className="w-6 h-6 text-gray800" />
+        </button>
+
         <form className="w-full flex items-center gap-4">
           <textarea className="chat-textarea" placeholder="Type a message" />
           <button

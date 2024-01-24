@@ -36,7 +36,7 @@ const Contacts = () => {
   return (
     <>
       <div className="flex flex-col w-[350px]">
-        <div className="flex gap-y-4 justify-between items-center w-full h-[80px] border-b px-6">
+        <div className="flex gap-y-4 justify-between items-center w-full h-[88px] border-b px-6">
           <div className="flex justify-center items-center gap-3">
             <h2 className="text-gray-800 font-semibold text-xl">Messages</h2>
             <div className="rounded-full bg-gray-100 text-xs p-[6px] font-bold text-gray-900">
